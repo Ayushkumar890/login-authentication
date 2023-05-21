@@ -12,49 +12,100 @@ body {
 
 /* //nav-bar-start// */
 
-.navbar{
-
-    background-color: rgb(2, 18, 26);
-    display: flex;
-    justify-content: right;
-    margin-top: 0;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    padding: 6px;
-}
-.navbar .nav-items{
-
-    margin-right: 70px;
-}
-
-.navbar .nav-item{
-    
-    list-style-type: none;
-    display: inline;
-    /* margin-right: 20px; */
-}
-
-
-.navbar a{
-    font-size: 16px;
-    color: aliceblue;
+a {
     text-decoration: none;
-    font-weight: 500;
-    margin-right: 30px;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    padding: 6px;
+    background-color:rgb(2, 18, 26);
+    color: #fff;
+
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    padding-right: 30px;
+   
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+
+.hamburger {
+   display: none;
+    font-size: 24px;
+    user-select: none;
+    margin-right: 32px;
+    
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display:none;
+        position: absolute;
+        background-color:transparent;
+        backdrop-filter: blur(20px);
+        width: 100%;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        z-index: 1;
+}
+.menu li:hover {
+    display: inline-block;
+    background-color:rgb(2, 18, 26);
+    transition: 0.3s ease;
+    border-radius: 20px;
+}
+
+.menu li + li {
+    margin-top: 12px;
+}
+
+input[type=checkbox]:checked ~ .menu {
+    display: block;
+}
+
+.hamburger {
+    display: flex;
+    justify-self: end;
+}
+
+
 }
 
 a:hover{
     color: yellow;
     font-size: 14px;
     transition: 0.5s;
-}
+} 
+
+
 
 /* //nav-bar-end// */
 
 .container{
     position: relative;
-    top: 65px;
+    top: 5px;
     width: 89%;
     margin: 0 5%;
     height: 95vh;
