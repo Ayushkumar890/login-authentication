@@ -1,80 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="index.css">
     <title>login-authentication</title>
-    <style>
-        input[type=email], input[type=password], input[type=Username] {
-        color: white;
-        text-align: center;
-        }
-
-    </style>
-    <script src="script.js"></script> 
+  <link rel="stylesheet"  href="index.css">
+  <script src="script.js"></script> 
 </head>
 <body>
-<div class="navbar">
-  <nav >
-      <ul class="nav-items">
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="signup.html">Sign Up</a></li>
-          <li class="nav-item"><a href="#">About</a></li>
-      </ul>
-    </nav>       
-</div>
-        <div class="container"> 
-            <div class="content">
-            <div class="social-icon">
-                <a class="linkedin" href="#"><i  class='bx bxl-linkedin-square'></i></a>
-                <a class="insta" href="#"><i class='bx bxl-instagram-alt' ></i></a>
-                <a class="facebook" href="#"><i class='bx bxl-facebook-square' ></i></a>
+    <nav class="navbar">
+      
+        <ul class="nav-links">
+    
+          <input style="display: none;" class="navcheck"  type="checkbox" id="checkbox_toggle">
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <div class="menu">
+    
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="#">About</a></li>
+          </div>
+        </ul>
+      </nav>
+
+
+
+
+   
+      <div class="container">
+      <div class="login-box">
+          <h1 style="margin-bottom: 30%;">Sign In</h1>
+               
+          <form name="myform" method="post" onsubmit="return validateform()">
+            <div >
+                <div style="display: flex;">
+                <span class="lable"> Username/<br> Email </span><input  class="detail" type="username" type="email" id="username" name="name" required >&nbsp;&nbsp;<span class="icon"><i class='bx bxs-user-circle'></i></span>
+             </div> 
+            <br><br>
+             <div style="display: flex;">
+                <span class="lable">Password</span><input class="detail" type="password" id="password" name="password" >&nbsp;&nbsp;<span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+             </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="form-box">
-                <form name="myform" method="post" onsubmit="return validateform()">
-                    <h2 style="color: white;">Sign In</h2>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="box2">
-                        <input  type="Username" type="email" name="name" required>
-                        <label style=" color: white; top: 171px;">Username/<br>Email</label>
-                        <span class="icon"><i class='bx bxs-user-circle'></i></span>
-                    </div>
 
-                    
-                    <div class="box2">
-                        <input type="password" name="password" required>
-                        <label style="color: white; top: 217px;">Password<br></label>
-                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                    </div>
-                    <br>
-                    <br>
 
-                    <div class="remember-forget">
-                        <label style="color: white;"><input class="checkbox" type="checkbox">Remember me</label>
-                        <a href="#">Forgot password?</a>
-                    </div><br>
-                    <button  onclick="validateform()" class="btn">Sign In</button>
 
-                    <div class="login-required" style="color: white; margin-left: 10%;"><br> Don't have an account <a  href="signup.html" >Sign Up</a></div>
-                </form>
+            <div class="remember-forget">
+                <label style="color: white;"><input class="checkbox" type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
             </div>
-        </div>
-    </div>
+              
+             
+              <button  onclick="validateform()" class="signin">Sign In</button>
+              
+
+              <div class="login-required" style="margin: 3% 0; color: white; margin-left: 10%;"><br> Don't have an account <a  href="signup.html" >Sign Up</a></div>
+              
+          </form>
 
 
-<div style=" text-align: center;">
-    <footer style="width: 89%; border-radius: 10px; margin-top: 67px; position: relative; left: 5%;  color: rgb(255, 255, 255); padding: 2%;">
-        <p>&#169 login-authentication@gmail.com</p>
-    </footer>
-</div>
+          
+
+      </div>
+
+      <div class="social-icon">
+            <span class="insta"><i class='bx bxl-instagram-alt' ></i></span>
+            <span class="facebook"><i class='bx bxl-facebook-circle' ></i></span>
+            <span class="linkedin"><i class='bx bxl-linkedin-square' ></i></span>
+          </div>
+  </div>
+  <div style=" text-align: center;">
+      <footer style="width: 89%; border-radius: 10px; position: relative; left: 5%; color: white; padding: 1%;">
+          <p>&#169 login-authentication@gmail.com</p>
+      </footer>
   </div>
 </body>
 </html>
